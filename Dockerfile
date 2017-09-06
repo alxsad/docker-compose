@@ -1,4 +1,4 @@
-FROM python:alpine
+FROM python:latest
 
 RUN pip install docker-compose
 
@@ -7,5 +7,4 @@ RUN apk update \
     && rm -rf /tmp/* \
     && rm -rf /var/cache/apk/* \
     && docker-compose --version
-
-CMD /bin/bash
+    
